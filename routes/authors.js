@@ -1,6 +1,6 @@
 const express = require("express");
-const Author = require("../models/author");
 const router = express.Router();
+const Author = require("../models/author");
 
 // All Authors Route
 router.get("/", async (req, res) => {
@@ -17,9 +17,7 @@ router.get("/", async (req, res) => {
       searchOptions: req.query
     });
   } catch {
-    res.redirect("/", {
-      errorMessage: "Error loading Authors"
-    });
+    res.redirect("/");
   }
 });
 
