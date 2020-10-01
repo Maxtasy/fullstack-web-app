@@ -1,4 +1,4 @@
-<h2>Search Books</h2>
+<h2 class="page-title">Search Books</h2>
 <form action="/books" method="GET">
   <div>
     <label for="title">Title</label>
@@ -8,6 +8,7 @@
       name="title"
       placeholder="Book Title"
       value="<%= searchOptions.title %>"
+      autofocus
     />
   </div>
   <div>
@@ -28,7 +29,7 @@
       value="<%= searchOptions.published_before %>"
     />
   </div>
-  <button type="submit">Search</button>
+  <button type="submit" class="btn">Search</button>
 </form>
 <br>
 <div>
