@@ -180,32 +180,81 @@ body {
   color: #F3F3F3;
 }
 
-.author-container {
+.author-row {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  border-top: 1px solid #F3F3F3;
-  margin: .1rem 0;
+  justify-content: space-between;
+  border-top: 1px solid #f3f3f310;
+  margin-bottom: .1rem;
 }
 
-.author-container:first-of-type {
+.author-row:first-of-type {
   border: none;
 }
 
-.author-container .author-name {
+.author-row .author-name {
   font-size: 1.5rem;
-  margin-right: auto;
 }
 
-.book-details-container {
+.book-details {
   display: flex;
+  gap: 2rem;
 }
 
-.details {
+.book-details-btn-grid {
   display: grid;
-  margin-left: 2rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  justify-items: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  grid-template-areas:
+    "edit delete"
+    "author author";
+  gap: .5rem;
+  margin-top: .5rem;
+}
+
+.book-details-author-btn {
+  grid-area: author;
+  justify-self: stretch;
+  text-align: center;
+}
+
+.book-details-grid {
+  display: grid;
+  align-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+}
+
+.book-details-label {
+  font-size: 1.2rem;
+  align-self: flex-start;
+}
+
+.book-grid {
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, 200px);
+}
+
+.book-grid-large {
+  grid-template-columns: repeat(auto-fill, 350px);
+}
+
+.book-cover {
+  width: 200px;
+  height: 300px;
+}
+
+.book-cover-large {
+  width: 350px;
+  height: 525px;
+}
+
+.error-message {
+  color: rgb(177, 32, 32);
 }
 
 @media(max-width: 780px) {

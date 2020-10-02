@@ -19,10 +19,12 @@
 </form>
 <br>
 <% authors.forEach(author => { %>
-  <div class="author-container">
+  <div class="author-row">
     <div class="author-name"><%= author.name %></div>
-    <a href="/authors/<%= author.id %>" class="btn">View</a>
-    <a href="/authors/<%= author.id %>/edit" class="btn">Edit</a>
-    <%- include("../partials/deleteForm", { url: `/authors/${author.id}` }) %>
+    <div class="btn-row">
+      <a href="/authors/<%= author.id %>" class="btn">View</a>
+      <a href="/authors/<%= author.id %>/edit" class="btn">Edit</a>
+      <%- include("../partials/deleteForm", { url: `/authors/${author.id}` }) %>
+    </div>
   </div>
 <% }); %>
