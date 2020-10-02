@@ -1,15 +1,21 @@
 <h2 class="page-title">Search Authors</h2>
-<form action="/authors" method="GET" class="form">
-  <label for="author_name">Name</label>
-  <input
-    type="text"
-    id="author_name"
-    name="author_name"
-    placeholder="Author Name"
-    value="<%= searchOptions.author_name %>"
-    autofocus
-  />
-  <button type="submit" class="btn">Search</button>
+<form action="/authors" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label for="author_name">Name</label>
+      <input
+        type="text"
+        id="author_name"
+        name="author_name"
+        placeholder="Author Name"
+        value="<%= searchOptions.author_name %>"
+        autofocus
+      />
+    </div>
+  </div>
+  <div class="form-row form-row-end btn-row">
+    <button type="submit" class="btn">Search</button>
+  </div>
 </form>
 <br>
 <% authors.forEach(author => { %>

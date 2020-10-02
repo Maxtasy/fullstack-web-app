@@ -1,35 +1,41 @@
 <h2 class="page-title">Search Books</h2>
 <form action="/books" method="GET">
-  <div>
-    <label for="title">Title</label>
-    <input
-      type="text"
-      id="title"
-      name="title"
-      placeholder="Book Title"
-      value="<%= searchOptions.title %>"
-      autofocus
-    />
+  <div class="form-row">
+    <div class="form-item">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Book Title"
+        value="<%= searchOptions.title %>"
+        autofocus
+      />
+    </div>
   </div>
-  <div>
-    <label for="published_after">Published After</label>
-    <input
-      type="date"
-      id="published_after"
-      name="published_after"
-      value="<%= searchOptions.published_after %>"
-    />
+  <div class="form-row">
+    <div class="form-item">
+      <label for="published_after">Published After</label>
+      <input
+        type="date"
+        id="published_after"
+        name="published_after"
+        value="<%= searchOptions.published_after %>"
+      />
+    </div>
+    <div class="form-item">
+      <label for="published_before">Published Before</label>
+      <input
+        type="date"
+        id="published_before"
+        name="published_before"
+        value="<%= searchOptions.published_before %>"
+      />
+    </div>
   </div>
-  <div>
-    <label for="published_before">Published Before</label>
-    <input
-      type="date"
-      id="published_before"
-      name="published_before"
-      value="<%= searchOptions.published_before %>"
-    />
+  <div class="form-row form-row-end btn-row">
+    <button type="submit" class="btn">Search</button>
   </div>
-  <button type="submit" class="btn">Search</button>
 </form>
 <br>
 <div>

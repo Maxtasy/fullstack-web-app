@@ -1,6 +1,8 @@
 <h2 class="page-title">Edit Author</h2>
 <form action="/authors/<%= author.id %>?_method=PUT" method="POST" class="form">
-  <%- include("./_form_fields") %> 
-  <a href="/authors/<%= author.id %>" class="btn">Cancel</a>
-  <button type="submit" class="btn">Save</button>
+  <%- include("./_form_fields") %>
+  <div class="form-row form-row-end btn-row">
+    <a href="/authors/<%= author.id %>" class="btn btn-align-right">Cancel</a>
+    <button type="submit" class="btn">Save</button>
+  </div>
 </form>
